@@ -31,20 +31,21 @@ const ContactPage = () => {
           <div className="mt-0 max-w-[40rem] ml-10 mr-10 lg:ml-40 bg-white bg-opacity-90 rounded-lg shadow-lg p-5 px-4 lg:px-8">
             {/* Logo */}
             <div className="flex justify-center mb-4 mr-10">
-              <img
+              {/* <img
                 src="/logo-1.webp"
                 alt="Logo"
                 className="h-16 w-16  " // Add animation to logo
-              />
-              <img
+              /> */}
+              {/* <img
                 src="/logo-2.webp"
                 alt="Logo"
                 className="h-16 w-28" // Slight delay for staggered effect
-              />
+              /> */}
             </div>
 
             <h1 className="uppercase text-[1.70rem] text-center font-semibold font-serif animate-slideInDown">
-              Sign up & Get Free Assistance
+              Get Free Assessment
+
             </h1>
             <Form />
           </div>

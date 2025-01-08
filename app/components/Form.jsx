@@ -73,7 +73,7 @@ const Form = () => {
             type="text"
             id="name"
             name="name"
-            placeholder="Your Name"
+            placeholder="Your Name.."
             className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
             required
             value={name}

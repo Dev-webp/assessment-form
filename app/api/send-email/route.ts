@@ -1,29 +1,29 @@
-// app/api/send-email/route.ts
-
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
-  const { name, email, phone, age, message } = await request.json();
+  const { name, email, phone, age, message, mcqAnswers } = await request.json();
+
+  // Log the received form data to verify that mcqAnswers are included
+  console.log('Received data:', { name, email, phone, age, message, mcqAnswers });
 
   try {
     // Create Nodemailer transporter with Gmail SMTP settings
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // Using Gmail as the service
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER, // Your Gmail address (e.g., your-email@gmail.com)
-        pass: process.env.EMAIL_PASS, // Your Gmail app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
       tls: {
-        // It's usually good to keep TLS security settings enabled
-        rejectUnauthorized: true, // Set to true for better security
+        rejectUnauthorized: true,
       },
     });
 
     // Email content
     const mailOptions = {
-      from: process.env.EMAIL_USER, // Sender address
-      to: 'vjcbangalore@gmail.com', // Recipient address
+      from: process.env.EMAIL_USER,
+      to: 'vjcbangalore@gmail.com',
       subject: 'New Contact Form Submission From VJC Overseas',
       text: `
         Name: ${name}
@@ -31,6 +31,7 @@ export async function POST(request: Request) {
         Phone: ${phone}
         Age: ${age}
         Message: ${message}
+        MCQ Answers: ${mcqAnswers.join(', ')}  // Displaying MCQ answers
       `,
     };
 
@@ -43,14 +44,12 @@ export async function POST(request: Request) {
     // Return success response
     return NextResponse.json({ message: 'Email sent successfully' });
   } catch (error: unknown) {
-    // Handle known errors (from nodemailer)
     if (error instanceof Error) {
-      console.error('Error sending email:', error.message); // Log the error for debugging
-      console.error('Stack:', error.stack);  // Log the stack trace for more detailed debugging
+      console.error('Error sending email:', error.message);
+      console.error('Stack:', error.stack);
       return NextResponse.json({ message: 'Error sending email', error: error.message }, { status: 500 });
     }
 
-    // Handle any unknown errors
     console.error('Unknown error occurred while sending email');
     return NextResponse.json({ message: 'Unknown error occurred', error: 'Unknown error' }, { status: 500 });
   }

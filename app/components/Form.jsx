@@ -109,9 +109,9 @@ const Form = () => {
                   <button
                     key={option}
                     onClick={() => handleMcqChange(currentStep, option)}
-                    className={`px-4 py-2 border rounded-lg shadow-sm ${
+                    className={`px-3 py-2 border border-slate-700 rounded-lg shadow-sm ${
                       mcqAnswers[currentStep] === option ? 'bg-gray-400 text-white' : 'bg-white text-black'
-                    } focus:outline-none`}
+                    } focus:outline-offset-2`}
                   >
                     {option}
                   </button>

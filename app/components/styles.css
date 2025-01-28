@@ -1,0 +1,52 @@
+/* Keyframes for animations */
+@keyframes slideFromTop {
+    0% {
+      transform: translateY(-70px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+      transform: translateX(-70px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes buttonHover {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+/* Apply animations */
+.animate-slideFromTop {
+    animation: slideFromTop 1s ease-out;
+}
+
+.animate-slideFromLeft {
+    animation: slideFromLeft 1s ease-out;
+}
+
+.animate-button {
+    animation: buttonHover 0.8s ease-in-out infinite alternate;
+}
+
+/* Manage opacity transitions between images */
+h1, p, button {
+  transition: opacity 1s ease-in-out;
+}

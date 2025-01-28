@@ -94,9 +94,9 @@ const Form = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className=" text-xl w-full flex flex-col items-center mt-7 min-h-screen lg:min-h-screen flex justify-start pt-6">
       {/* Heading for the form */}
-      <h2 className="text-2xl font-bold text-orange-600"  >Get <span style={{color:'black'}}>Free</span> Assessment </h2>
+      {/* <h2 className="text-2xl font-bold text-orange-600"  >Get <span style={{color:'black'}}>Free</span> Assessment </h2> */}
   
       <div className="w-95 h-auto p-4 rounded-lg">
         {currentStep < mcqQuestions.length ? (
@@ -123,7 +123,7 @@ const Form = () => {
               {currentStep > 0 && (
                 <button
                   type="button"
-                  className="bg-gray-600 text-white py-2 px-6 rounded-lg w-15 hover:bg-gray-500"
+                  className="bg-gray-500 text-white py-2 px-6 rounded-lg w-15 hover:bg-gray-700"
                   onClick={handlePrevious}
                 >
                   Previous
@@ -131,7 +131,7 @@ const Form = () => {
               )}
               <button
                 type="button"
-                className="bg-orange-400 text-white py-2 px-6 rounded-lg hover:bg-black"
+                className="bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600"
                 onClick={handleNext}
                 disabled={!mcqAnswers[currentStep]} // Disable next button if no answer is selected
               >
@@ -206,7 +206,7 @@ const Form = () => {
                   name="message"
                   placeholder="Your Message"
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm"
+                  className="w-full px-4 py-2 border border-gray-500 rounded-lg shadow-sm"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
@@ -216,14 +216,14 @@ const Form = () => {
             <div className="flex justify-between">
               <button
                 type="button"
-                className="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-gray-500"
+                className="bg-gray-500 text-white py-2 px-6 rounded-lg hover:bg-gray-700"
                 onClick={handlePrevious}
               >
                 Previous
               </button>
               <button
                 type="submit"
-                className="w-56 bg-orange-600 text-white py-2 rounded-lg font-semibold hover:bg-black"
+                className="w-56 bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-orange-600"
                 disabled={loading}
               >
                 {formStatus === 'success' ? 'Form Submitted!' : loading ? 'Submitting...' : 'Submit'}

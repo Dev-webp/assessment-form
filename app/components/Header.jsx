@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className="w-full bg-gradient-to-r from-saffron py-0 lg:py-0 px-0 sm:px-0 lg:px-16 shadow-lg h-20" style={{backgroundColor:'rgb(248, 134, 53)'}}>
+    <header className="w-full bg-gradient-to-r from-saffron py-0 lg:py-0 px-0 sm:px-0 lg:px-16 shadow-lg h-20 bg-orange-400" style={{fontFamily:'Times new Roman'}}>
       <div className="flex justify-between items-center max-w-screen-xl mx-auto">
     
         <div className="flex items-center ml-4 sm:ml-10 lg:ml-14 mt-2 w-24">
@@ -89,6 +89,14 @@ const Header = () => {
        {/* Left Half: Image */}
        <div className="flex-1 relative hidden lg:block">
            
+          </div>
+          <div className="flex-1 relative w-full hidden lg:block">
+            {/* <img
+              src="/2.webp"
+              alt="Contact Page Visual"
+              // className="w-full h-full object-cover"
+             
+            /> */}
           </div>
 
       

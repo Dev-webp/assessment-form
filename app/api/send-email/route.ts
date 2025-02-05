@@ -2,10 +2,10 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
-  const { name, email, phone, age, message, mcqAnswers } = await request.json();
+  const { name, email, phone, age, message, selectedCountry, mcqAnswers } = await request.json();
 
-  // Log the received form data to verify that mcqAnswers are included
-  console.log('Received data:', { name, email, phone, age, message, mcqAnswers });
+  // Log the received form data to verify that selectedCountry is included
+  console.log('Received data:', { name, email, phone, age, message, selectedCountry, mcqAnswers });
 
   try {
     // Create Nodemailer transporter with Gmail SMTP settings
@@ -31,7 +31,8 @@ export async function POST(request: Request) {
         Phone: ${phone}
         Age: ${age}
         Message: ${message}
-        MCQ Answers: ${mcqAnswers.join(', ')}  // Displaying MCQ answers
+        Selected Country: ${selectedCountry}  
+        MCQ Answers: ${mcqAnswers.join(', ')}  
       `,
     };
 

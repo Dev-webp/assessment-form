@@ -18,6 +18,12 @@ const MigrateToYourDreamCountry = () => {
     <div className="text-center py-12 bg-white" style={{ fontFamily: 'Times New Roman' }}>
       {/* Heading */}
       <h2 className="text-4xl font-bold mb-12">Migrate to Your Dream Country</h2>
+      <div className="flex justify-center items-center mb-12 -m-8">
+        <div className="w-20 h-1 bg-orange-600"></div>
+        <div className="w-4 h-1 bg-orange-600 mx-2"></div>
+        <div className="w-2 h-1 bg-orange-600 mx-1"></div>
+      </div>
+
 
       {/* Images Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 px-6 lg:px-12 justify-center">
@@ -43,12 +49,13 @@ const MigrateToYourDreamCountry = () => {
       </div>
 
       {/* Get in Touch Section */}
-      <div className="mt-12">
-        <button className="bg-white text-orange-700 text-3xl py-2 px-6 rounded-full flex items-center justify-center mx-auto">
-          Get in Touch
-          <span className="ml-2 text-3xl">→</span>
-        </button>
-      </div>
+      <div className="mt-12 flex justify-start">
+  <button className="bg-white text-orange-700 text-3xl py-2 px-6 rounded-full flex items-center ml-7">
+    Get in Touch
+    <span className="ml-2 text-3xl">→</span>
+  </button>
+</div>
+
     </div>
   );
 };

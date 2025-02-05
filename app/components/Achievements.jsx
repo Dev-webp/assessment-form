@@ -24,9 +24,15 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="text-center py-12 bg-white" style={{ fontFamily: 'Times New Roman' }}>
+    <div className="text-center py-12 bg-whiite" style={{ fontFamily: 'Times New Roman' }}>
       {/* Heading */}
       <h2 className="text-4xl font-bold mb-12">How Can We Help You?</h2>
+      {/* Centered Orange Underline */}
+      <div className="flex justify-center items-center mb-12 -m-8">
+        <div className="w-20 h-1 bg-orange-600"></div>
+        <div className="w-4 h-1 bg-orange-600 mx-2"></div>
+        <div className="w-2 h-1 bg-orange-600 mx-1"></div>
+      </div>
 
       {/* Circle Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 px-6 lg:px-12">
@@ -51,7 +57,7 @@ const Achievements = () => {
               <div className="absolute w-28 h-28 bg-blue-900 opacity-20 rounded-full"></div>
 
               {/* Main Circle with icon */}
-              <div className={`${circleColors[index]} w-20 h-28 text-white flex items-center justify-center text-3xl rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`${circleColors[index]} w-24 h-28 text-white flex items-center justify-center text-3xl rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                 {icon}
               </div>
             </div>
@@ -61,7 +67,9 @@ const Achievements = () => {
           </div>
         ))}
       </div>
+     
     </div>
+    
   );
 };
 

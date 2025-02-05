@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaTwitter } from 'react
 const Footer = () => {
   return (
     <>
-    <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-10">
+    <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-10" style={{ fontFamily: 'Times New Roman, serif' }}>
     <div className="max-w-[72rem] mx-auto px-5 text-center md:text-left border-b border-gray-700">
         {/* Grid for Content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">

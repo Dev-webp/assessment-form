@@ -30,13 +30,19 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="w-full py-16 bg-gray-50 text-center" style={{ fontFamily: 'Times New Roman, serif' }}>
-      <h2 className="text-3xl font-bold text-gray-800 mb-12">Why Choose Us</h2>
+    <div className="w-full py-16 bg-white text-center" style={{ fontFamily: 'Times New Roman, serif' }}>
+      <h2 className="text-3xl font-bold text-gray-800 mb-12">Why We're the Right Choice</h2>
+      <div className="flex justify-center items-center mb-12 -m-8">
+        <div className="w-20 h-1 bg-orange-600"></div>
+        <div className="w-4 h-1 bg-orange-600 mx-2"></div>
+        <div className="w-2 h-1 bg-orange-600 mx-1"></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {reasons.map((reason, index) => (
           <div
             key={index}
-            className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col justify-between"
+            className="group border border-orange-400 p-8 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to- flex flex-col justify-between"
           >
             <div className="flex justify-center mb-6">
               <img
@@ -49,9 +55,9 @@ const WhyChooseUs = () => {
             <p className="text-gray-600 mb-6">{reason.description}</p>
             <a
               href="#"
-              className="text-blue-500 flex items-center justify-start font-medium mt-auto"
+              className="text-orange-500 flex items-center justify-start font-medium mt-auto"
             >
-              Know More <FaArrowRight className="ml-2 text-blue-500" />
+              Know More <FaArrowRight className="ml-2 text-orange-500" />
             </a>
           </div>
         ))}
